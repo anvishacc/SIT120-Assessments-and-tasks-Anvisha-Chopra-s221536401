@@ -1,0 +1,19 @@
+p{
+    color:red
+}
+/* style for title class */
+.title{
+    color: blue
+}
+
+/* style for id */
+#container{
+    font-size: large;
+    border: 3 px solid green;
+}
+
+/* style for image */
+img{
+    height: 500px;
+    width: 500px;
+}

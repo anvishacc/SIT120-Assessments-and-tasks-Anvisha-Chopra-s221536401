@@ -1,0 +1,27 @@
+h1 {
+    position: absolute;
+    width: 580px;
+    height: 100px;
+    left: 170px;
+    top: 5.5px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 145px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+img {
+left:56px;
+top:150px;
+width: 550px;
+height:450px;
+background-color:rgba(190, 184, 184, 0.6800000071525574);
+position:absolute;
+}

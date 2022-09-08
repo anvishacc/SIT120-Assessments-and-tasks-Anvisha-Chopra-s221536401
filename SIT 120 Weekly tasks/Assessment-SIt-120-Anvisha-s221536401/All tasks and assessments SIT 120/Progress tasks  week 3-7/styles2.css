@@ -1,0 +1,93 @@
+h1 {
+position: absolute;
+width: 580px;
+height: 100px;
+left: 250px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 800;
+font-size: 60px;
+line-height: 145px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+}
+.fullname
+{
+text-align:center;
+vertical-align:text-middle;
+font-size:40px;
+font-family:Inter;
+line-height:auto;
+color:#ffffff;
+left: 56px;
+top:100px;
+position:absolute;
+}
+.rectangle7
+{
+width:480px;
+height:60px;
+left:56px;
+top:200px;
+position:absolute;
+}
+.contactnumber
+{
+    text-align:center;
+    vertical-align:text-middle;
+    font-size:40px;
+    font-family:Inter;
+    line-height:auto;
+    color:#ffffff;
+    left: 56px;
+    top:250px;
+    position:absolute;
+}
+.rectangle8
+{
+    width:480px;
+    height:60px;
+    left:56px;
+    top:350px;
+    position:absolute;
+}
+.emailid
+{
+    text-align:center;
+    vertical-align:text-middle;
+    font-size:40px;
+    font-family:Inter;
+    line-height:auto;
+    color:#ffffff;
+    left: 56px;
+    top:400px;
+    position:absolute;
+}
+.rectangle9
+{
+    width:480px;
+    height:60px;
+    left:56px;
+    top:500px;
+    position:absolute;
+}
+
+.rectangle6
+{
+left:56px;
+top:140px;
+width: 500px;
+height:450px;
+background-color:rgba(190, 184, 184, 0.6800000071525574);
+position:absolute;
+}
+
+
+
+
+
+

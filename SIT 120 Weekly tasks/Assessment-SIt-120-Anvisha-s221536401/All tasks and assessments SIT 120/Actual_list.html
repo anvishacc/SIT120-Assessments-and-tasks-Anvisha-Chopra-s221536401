@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Roomies_intercept_HomePage </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    </head>  
+    
+    <body> 
+        <div id="app">
+        <button class="add_grocery_item" @click="add"><b>Add grocery items:</b>
+        </button>
+        <Input v-for='(grocery,index) in groceries' v-model="groceries[index].name"></Input>        
+        </div>
+    </body>
+
+</html>
+
+<script >
+        Vue.component('Input', {
+        props: ['value'],
+        template: `<input  :value="value" @input="$emit('input', $event.target.value)" />`
+      })      
+      let app = new Vue({
+        el: '#app',
+        data() {
+      
+          return {
+            groceries: [{
+              name: ''
+            }]
+          }
+        },      
+        methods: {
+          add() {
+            this.groceries.push({
+              name: ''
+            })
+          }
+        }
+      })
+</script>
+
+<style>    
+        /*for the background image of our actual list page */    
+        body {
+          background-image: url('rainbow.webp');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+            }
+          
+        /* for the add grocery item on the actual list page */
+        .add_grocery_item{          
+          border: 2px solid yellow;          
+        }
+</style>
+    
+        
+
+        
+

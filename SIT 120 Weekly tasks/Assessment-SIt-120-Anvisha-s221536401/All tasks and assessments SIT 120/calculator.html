@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Roomies_intercept_HomePage </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>        
+    </head>  
+    
+    <body>      
+      <div id="app">
+        <div id="calbase">
+                <div class="top">
+                    <input type="text" v-model="total" />
+                </div>
+                <div id="keys">
+                    <div class="seven" v-on:click="key(7)">7</div>
+                    <div v-on:click="key(8)">8</div>
+                    <div v-on:click="key(9)">9</div>
+                    <div v-on:click="key('+')">+</div>
+                    <div v-on:click="key(4)">4</div>
+                    <div v-on:click="key(5)">5</div>
+                    <div v-on:click="key(6)">6</div>
+                    <div v-on:click="key('-')">-</div>
+                    <div v-on:click="key(1)">1</div>
+                    <div v-on:click="key(2)">2</div>
+                    <div v-on:click="key(3)">3</div>
+                    <div v-on:click="key('*')">*</div>
+                    <div v-on:click="key(0)">0</div>
+                    <div v-on:click="clear()" class="clear">c</div>
+                    <div v-on:click="equal()">=</div>
+                    <div v-on:click="key('/')">/</div>
+                </div>
+          </div>
+      </div>    
+    </body>
+
+</html>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+          total: 0,
+          image:"cash.gif",
+        },
+        methods: {
+            key: function(num) {
+            return this.total += num;
+            },
+            clear: function() {
+            return this.total = 0;
+            },
+            equal: function() {
+             let equal = this.total;
+             return this.total = eval(equal);
+            }         
+        }
+    })
+</script>
+    
+<style>
+/* for the background of our calculator page*/
+body {  
+        background-image: url('cash.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      } 
+
+
+/* for the top of the calculator*/
+body .top input {
+  height: 36px;
+  width: 90%;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 0 0 14px 0;
+  border: 0;
+  padding: 0 1em;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  top: 70px;
+}
+
+/*for the specification of the keys on the calculator*/
+body #keys div {
+  cursor: pointer;
+  width: 66px;
+  height: 36px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2em;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 7px 11px 0;
+  float: left;
+  transition: all 0.2s ease;
+}
+
+/*For the keys on the calculator, some customized functions have been defined */
+body #keys div:hover {
+  background-color: #d6d6d6;
+}
+body #keys .zero {
+  width: 138px !important;
+}
+body #keys .clear {
+  background-color: #ffd900 !important;
+}
+
+/*for the base of the calculator*/
+body #calbase {  
+  border-radius: 23px;
+  padding: 11em 5em 5em 5em;
+  margin: auto;
+  width: 292px;
+  clear: both;
+  display: table; 
+}
+
+</style>

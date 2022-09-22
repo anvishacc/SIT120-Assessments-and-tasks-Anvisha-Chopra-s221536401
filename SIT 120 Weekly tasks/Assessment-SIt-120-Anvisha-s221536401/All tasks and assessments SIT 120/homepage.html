@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Roomies_intercept_HomePage </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>  
+    
+    <body>
+        <div id="app">            
+            <h1>{{ message1}}</h1> 
+            <h2>{{ message2 }}</h2>
+            <h3>{{message3}}</h3>
+            <img class="img" v-bind:src="image" v-bind:alt="altText"/>            
+            <a class="grocery_link" :href="des"><b>Lets add groceries digitally: </b></a>             
+            <a class="calculator_link" :href="des1"><b>Lets calculate our grocery budget: </b></a> 
+            <a class="aboutme_link" :href="des2"><b>About Me </b></a>            
+        </div> 
+
+        <div id="app1">  
+            <button class="magic" @click="show=!show">
+                <b>o</b>
+            </button>
+            <div v-if="show">
+                <h4>{{demo}}</h4>
+            </div>          
+        </div> 
+    </body> 
+
+</html>
+
+<script>
+    let app = new Vue({
+        el: "#app",
+        data: {
+            message1: "Roomies Intercept",
+            message2:"-Grocery buying and budgeting made fun and easier",
+            message3: "Are you also tired of searching for the grocery list that your roomate  pasted on the fridge, because it has just dissapeared and you got no clue where? Are you also looking for something that makes your grocery budgeting process easier. You have reached the right site buddy! We have dedicated webpages that takes care of all your worries. You can not only add your grocery items and make a list digitally but also use the inbuilt calculator to make your budgeting process less tiring, more accuarte and much more effecient. Navigate through and let the magic begin! ",
+            image:"dribble_cart.gif",
+            altText:"shoppingcart",            
+            des:"DigitalGroceryList.html",
+            des1: "calculator.html",
+            des2:"AboutMe.html"
+            
+        },
+        });
+        console.log(app.message1)
+        console.log(app.message2)
+
+        let app1 = new Vue({
+        el: "#app1",
+        
+        data() {
+            return{
+                demo: 'Click the buttons below to make budgeting easier',
+                show:true,
+            }
+        },
+        });
+</script>
+
+<style>
+    /* for the background image on the home page*/
+    body {
+  
+        background-image: url('try1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    } 
+
+    /* h1= "Roomies intercept" heading on the home page */
+    h1 {
+        position: absolute;
+        width: 1500px;
+        height: 50px;
+        left: 30px;
+        top: 10px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 50;
+        font-size: 100px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+        text-align: center; 
+        color: yellow;       
+    } 
+    
+    /* h2= "Analyzing made easier and fun" heading on the home page */
+    h2 {
+        position: absolute;
+        width: 2000px;
+        height: 150px;
+        left: 130px;
+        top: 30px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 73px;
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+        color:  white;
+    } 
+
+    /*for the cart gif on the home page*/
+    .img {
+     position: absolute;
+     width: 300px;
+     height: 300px;
+     left: 950px;
+     top: 90px;     
+     border: 2px solid yellow;
+    } 
+
+    /*for the grocery link on the homepage*/
+    .grocery_link{
+          position: absolute;
+          width: 250px;
+          height: 30px;
+          left: 980px;
+          top: 500px;
+          border: 3px solid yellow;
+          background-color: whitesmoke;
+          align-items: center;
+        }
+     
+    /*for the calculator link on the homepage*/
+    .calculator_link{
+          position: absolute;
+          width: 250px;
+          height: 30px;
+          left: 980px;
+          top: 550px;
+          border: 3px solid yellow;
+          background-color: whitesmoke;
+          align-items: center;
+    } 
+
+    /*for the aboutme link on the homepage*/
+    .aboutme_link{
+          position: absolute;
+          width: 80px;
+          height: 25px;
+          left: 1260px;
+          top: 10px;
+          border: 3px solid yellow;
+          background-color: whitesmoke;
+          align-items: center;
+    } 
+    
+    /* for the product suummary on the home page*/
+    h3 {
+        position: absolute;
+        width: 550px;
+        height: 50px;
+        left: 130px;
+        top: 350px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 50;
+        font-size: 26px;
+        line-height:30px;
+        display: flex;
+        align-items: center;
+        text-align: left; 
+        color: yellow;       
+    } 
+    
+    /* specificcations for the "click the buttons" content on this page */
+    h4 {
+        position: absolute;
+        width: 550px;
+        height: 50px;
+        left: 900px;
+        top: 400px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 50;
+        font-size: 20px;
+        line-height:30px;
+        display: flex;
+        align-items: center;
+        text-align: left; 
+        color: yellow;       
+    }   
+
+    /*adjustments made to fit smaller screen sizes*/
+    @media only screen and (max-width: 600px) {
+        
+        h1{
+            width:fit-content;
+            font-size: 50px;
+            top:20px
+        }
+        h2{
+            width:fit-content;
+            font-size: 20px;
+            top: 21px;
+            left: 15px
+        }
+        h3{
+            width:fit-content;
+            top: 300px;
+            left: 20px;
+            font-size: 20px;
+        }
+        .img{
+            width: 50px;
+            height:50px;
+            top: 50px;
+            left: 420px;
+        }
+        .grocery_link{
+            width:fit-content;
+            left: 50px;
+            top: 550px
+        }
+
+        .calculator_link{
+            width:fit-content;
+            left: 250px;
+            top: 550px;
+        } 
+
+        .aboutme_link{
+            width: 80px;
+            left:400px;
+            top: 1px
+        }
+}
+</style>
+
+   
+
+
+   
+

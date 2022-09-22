@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Roomies_intercept_HomePage </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    </head>  
+    
+    <body>
+        <div id="app1">            
+            <h1>{{ message1}}</h1> 
+            <h2>{{ message2 }}</h2> 
+            <h3>{{ message3 }}</h3>
+            
+            <a class="add_grocery_item" :href="des"><b>Add grocery item</b></a>
+        </div>                  
+    </body>
+    
+</html>
+<script>
+    let app1 = new Vue({
+        el: "#app1",
+        data: {
+            message1: "Grocery list",
+            message2:"Bro, I am hungry get this for me asap!",
+            message3: "Hate signing up or logging in, over and over again, No worries, we got you covered. No signup! No login required! Just click on the button below and let the magic begin!",        
+            des: "Actual_list.html"        
+        },
+        });
+        console.log(app.message1)
+        console.log(app.message2)
+</script>  
+    
+<style>
+        /*for setting the background image for the Digital grocery page*/
+        body {
+            background-image: url('digis_back.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            }
+        /* h1= "Grocery" heading on the grocery list page */
+        h1 {
+            position: absolute;
+            width: 1500px;
+            height: 50px;
+            left: 750px;
+            top: 20px; 
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 120px;
+            line-height: 79px;
+            display: flex;
+            align-items: center;
+            text-align: center; 
+            color: yellow;
+        } 
+        
+        /* h2= "Bro,  I am hungry get this for me asap!" heading on the grocery list page */
+        h2 {
+            position: absolute;
+            width: 2000px;
+            height: 150px;
+            left: 790px;
+            top: 80px; 
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 35px;
+            line-height: 73px;
+            display: flex;
+            align-items: flex-end;
+            text-align: right;
+            color:white;
+        } 
+
+        /* h3= "hate signing up text" heading on the grocery list page */
+        h3 {
+            position: absolute;
+            width: 400px;
+            height: 150px;
+            left: 850px;
+            top: 250px; 
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 35px;
+            display: flex;
+            align-items: flex-end;
+            text-align:left;
+            color:yellow;            
+        }        
+
+        /*to add grocery item (box and link specification)*/
+        .add_grocery_item{
+          position: absolute;
+          width: 120px;
+          height: 30px;
+          left: 1000px;
+          top: 450px;
+          border: 2px solid yellow;
+          background-color: whitesmoke;
+          align-items: center;
+        }
+</style>
+    

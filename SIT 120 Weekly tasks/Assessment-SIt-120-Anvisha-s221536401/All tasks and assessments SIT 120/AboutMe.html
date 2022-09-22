@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Roomies_intercept_HomePage </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>  
+    
+    <body>
+        <div id="app">
+            <h1>{{message1}}</h1>
+            <h2>{{someInfo}}</h2> 
+            <img class="img" v-bind:src="image" v-bind:alt="altText"/>         
+        </div> 
+    </body> 
+
+</html>
+
+<script>
+    const myMixin={
+        data(){
+            return{
+                someInfo: 'Hey everyone, This is Anvisha Chopra. I am a student at deakin university and this  is my first attempt at making a website. When I came to Australia, as an international student one of the biggest challenges I faced was to maintain the list of groceries that were needed to be bought from the supermarket and finally budget it with my roommates. There have been various instances where they wrote a long list of items to be brought on a piece of paper and pasted it to the fridge with the help of a fridge magnet which would often fall down and would never be found again. Plus doing all the calculations related to the groceries bought and budgeting the entire thing was very tiring and time consuming. Hence I thought of bringing this entire process on web and making it digital. Not only would this help to make sure that the grocery list is never lost again and all the items are bought on time but also the fact that we would be able to save loads of paper because of it. We can add unlimited items of grocery using this website and by further using its extended calculator feature we can also analyze and budget well. Hence, reducing man efforts and making the entire process more efficient and accurate.',
+            }
+        }
+    }
+    let app = new Vue({
+        el: "#app",
+        mixins:[myMixin],
+        data: {
+            message1: "About Me",            
+            image:"me.jpeg",
+            altText:"MyPhoto",          
+        },
+    })
+        
+</script>
+
+<style>
+     /* for the background image on the About Me page*/
+     body {  
+        background-image: url('fire.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    } 
+
+    /* h1= "About Me" heading on the home page */
+    h1 {
+        position: absolute;
+        width: 1500px;
+        height: 50px;
+        left: 470px;
+        top: 10px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 50;
+        font-size: 100px;
+        line-height: 79px;
+        display: flex;
+        align-items: center;
+        text-align: center; 
+        color: white;       
+    } 
+
+    /* h2= "content" on the About Me page */
+    h2 {
+        position: absolute;
+        width: 1000px;
+        height: 150px;
+        left: 50px;
+        top: 450px; 
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 35px;
+        display: flex;
+        align-items: flex-end;
+        text-align: justify;
+        color:  yellow;
+    } 
+
+    /*for my image on the about me page*/
+    .img {
+     position: absolute;
+     width: 250px;
+     height: 500px;
+     left: 1100px;
+     top: 90px;     
+     border: 2px solid yellow;
+    } 
+
+    
+</style>
+
+   
+
